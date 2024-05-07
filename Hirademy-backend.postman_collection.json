@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "8acd21a6-2529-484f-bf91-fc9bdebc663a",
+		"name": "Hirademy-backend",
+		"description": "### Testing Endpoints\n\n#### Base URL\n\nThe base URL for the API endpoints is `http://localhost:4000/hirademy/api`.\n\n#### 1\\. Create Assistant\n\n- **URL**: `POST /assistant`\n- **Description**: Create a new assistant.\n- **Request Body**: JSON object with the following fields:\n    \n\n``` json\n{\n  \"name\": \"John Doe\",\n  \"mobile\": \"1234567890\",\n  \"email\": \"john@example.com\",\n  \"salary\": 50000,\n  \"city\": \"New York\",\n  \"country\": \"USA\",\n  \"department\": \"Engineering\",\n  \"role\": \"Software Engineer\"\n}\n\n ```\n\n- **Response**: Returns the created assistant object.\n    \n\n#### 2\\. Get All Assistants\n\n- **URL**: `GET /assistant`\n- **Description**: Retrieve a list of all assistants.\n- **Response**: Returns an array of assistant objects.\n    \n\n#### 3\\. Get Assistant by ID\n\n- **URL**: `GET /assistant/:id`\n- **Description**: Retrieve an assistant by ID.\n- **Parameters**: Replace `:id` with the ID of the assistant.\n- **Response**: Returns the assistant object matching the provided ID.\n    \n\n#### 4\\. Update Assistant by ID\n\n- **URL**: `PUT /assistant/:id`\n- **Description**: Update an existing assistant by ID.\n- **Parameters**: Replace `:id` with the ID of the assistant.\n- **Request Body**: JSON object with the fields to be updated.\n- **Response**: Returns the updated assistant object.\n    \n\n#### 5\\. Delete Assistant by ID\n\n- **URL**: `DELETE /assistant/:id`\n- **Description**: Delete an assistant by ID.\n- **Parameters**: Replace `:id` with the ID of the assistant.\n- **Response**: Returns a success message upon successful deletion.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31466465"
+	},
+	"item": [
+		{
+			"name": "create assistant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"John Doe 3\",\r\n  \"mobile\": \"1234567890\",\r\n  \"email\": \"john.doe@example.com\",\r\n  \"salary\": 50000,\r\n  \"city\": \"New York\",\r\n  \"country\": \"USA\",\r\n  \"department\": \"IT\",\r\n  \"role\": \"Assistant\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/hirademy/api/assistant/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"hirademy",
+						"api",
+						"assistant",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find assistant by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/hirademy/api/assistant/66393a0759e3c8fb6b423761",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"hirademy",
+						"api",
+						"assistant",
+						"66393a0759e3c8fb6b423761"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all assistant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/hirademy/api/assistant/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"hirademy",
+						"api",
+						"assistant",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change assistant details by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"John Doe changed\",\r\n  \"mobile\": \"1234567890\",\r\n  \"email\": \"john.doe@example.com\",\r\n  \"salary\": 50000,\r\n  \"city\": \"New York\",\r\n  \"country\": \"USA\",\r\n  \"department\": \"IT\",\r\n  \"role\": \"Assistant\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/hirademy/api/assistant/66393a0159e3c8fb6b42375f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"hirademy",
+						"api",
+						"assistant",
+						"66393a0159e3c8fb6b42375f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete assistant by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/hirademy/api/assistant/66393a0159e3c8fb6b42375f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"hirademy",
+						"api",
+						"assistant",
+						"66393a0159e3c8fb6b42375f"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
